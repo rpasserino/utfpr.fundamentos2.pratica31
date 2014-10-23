@@ -12,22 +12,25 @@ import java.util.GregorianCalendar;
  * @author user
  */
 public class Pratica31 {
+    private static Date inicio;
+    private static String meuNome;
+    private static GregorianCalendar dataNascimento;
+    private static Date fim;
+
     public static void main(String args[]){
-        Date inicio = new Date();
-        long tinicio = inicio.getTime();
-        String meuNome = "Rodrigo Passerino Fischer da Silva";     
+        inicio = new Date();
+        meuNome = "Rodrigo Passerino Fischer da Silva";     
         System.out.println(meuNome.toUpperCase());
-        System.out.print(meuNome.toUpperCase().charAt(29) + meuNome.substring(30,34) + ", " +meuNome.toUpperCase().charAt(0) + ". " + meuNome.toUpperCase().charAt(8) + ". " + meuNome.toUpperCase().charAt(18) + ".");  
-        GregorianCalendar dataNascimento = new GregorianCalendar(1996, 8, 12);
+        System.out.print(meuNome.toUpperCase().charAt(29) + meuNome.toLowerCase().substring(30,34) + ", " +meuNome.toUpperCase().charAt(0) + ". " + meuNome.toUpperCase().charAt(8) + ". " + meuNome.toUpperCase().charAt(18) + ".");  
+        dataNascimento = new GregorianCalendar(1996, 8, 12);
         GregorianCalendar data =new GregorianCalendar(); 
         int anos= data.get(Calendar.YEAR) - dataNascimento.get(Calendar.YEAR);
         int meses = data.get(Calendar.MONTH) - dataNascimento.get(Calendar.MONTH);
         int dias = data.get(Calendar.DAY_OF_MONTH) - dataNascimento.get(Calendar.DAY_OF_MONTH);
         int idadedias = anos*365+meses*30+dias;
         System.out.println("\nIdade em dias: "+idadedias);
-        Date fim = new Date();
-        long tfim = fim.getTime();
-        System.out.println("Tempo de processamento em milisegundos:" + (tfim-tinicio));
+        fim = new Date();
+        System.out.println("Tempo de processamento em milisegundos:" + (fim.getTime()-inicio.getTime()));
         
     }
 }
