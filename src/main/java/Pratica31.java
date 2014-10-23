@@ -14,7 +14,7 @@ import java.util.GregorianCalendar;
 public class Pratica31 {
     private static Date inicio;
     private static String meuNome = "Rodrigo Passerino Fischer da Silva";
-    private static GregorianCalendar dataNascimento = new GregorianCalendar(1996, 8, 12);
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1996, 08, 12);
     private static Date fim;
 
 
@@ -24,6 +24,7 @@ public class Pratica31 {
         System.out.print(meuNome.toUpperCase().charAt(29) + meuNome.toLowerCase().substring(30,34) + ", " +meuNome.toUpperCase().charAt(0) + ". " + meuNome.toUpperCase().charAt(8) + ". " + meuNome.toUpperCase().charAt(18) + ".");
         System.out.println("\n" + (inicio.getTime()-dataNascimento.getTimeInMillis())/86400000);
         fim = new Date();
-        System.out.println(fim.getTime()-inicio.getTime());        
+        System.out.println(fim.getTime()-inicio.getTime());
+        
     }
 }
