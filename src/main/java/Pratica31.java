@@ -16,9 +16,12 @@ public class Pratica31 {
     private static String meuNome;
     private static GregorianCalendar dataNascimento;
     private static Date fim;
+    private static long tinicio;
+    private static long tfim;
 
     public static void main(String args[]){
         inicio = new Date();
+        tinicio=inicio.getTime();
         meuNome = "Rodrigo Passerino Fischer da Silva";     
         System.out.println(meuNome.toUpperCase());
         System.out.print(meuNome.toUpperCase().charAt(29) + meuNome.toLowerCase().substring(30,34) + ", " +meuNome.toUpperCase().charAt(0) + ". " + meuNome.toUpperCase().charAt(8) + ". " + meuNome.toUpperCase().charAt(18) + ".");  
@@ -30,7 +33,8 @@ public class Pratica31 {
         int idadedias = anos*365+meses*30+dias;
         System.out.println("\nIdade em dias: "+idadedias);
         fim = new Date();
-        System.out.println("Tempo de processamento em milisegundos:" + (fim.getTime()-inicio.getTime()));
+        tfim=fim.getTime();
+        System.out.println(tfim-tinicio);
         
     }
 }
