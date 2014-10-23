@@ -14,7 +14,7 @@ import java.util.GregorianCalendar;
 public class Pratica31 {
     private static Date inicio;
     private static String meuNome = "Rodrigo Passerino Fischer da Silva";
-    private static GregorianCalendar dataNascimento = new GregorianCalendar(1996, 5, 07);
+    private static GregorianCalendar dataNascimento = new GregorianCalendar(1996, 8, 12);
     private static Date fim;
 
 
